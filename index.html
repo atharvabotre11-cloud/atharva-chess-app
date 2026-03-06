@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <title>Atharva Chess Analysis</title>
+    <!-- CSS for Chessboard -->
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; background: #2c3e50; color: white; }
+        #board { width: 400px; margin: 20px auto; }
+        .info { background: #34495e; padding: 20px; border-radius: 10px; width: 450px; margin: auto; }
+        #status { font-weight: bold; color: #f1c40f; }
+    </style>
+</head>
+<body>
+    <h1>♟️ Atharva Chess Analysis App</h1>
+    <div id="board"></div>
+    <div class="info">
+        <p>स्थिती: <span id="status">खेळ सुरू करा</span></p>
+        <div id="analysis">विश्लेषण इथे दिसेल...</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+    <script>
+        var board = Chessboard('board', {
+            draggable: true,
+            dropOffBoard: 'snapback',
+            position: 'start'
+        });
+    </script>
+</body>
+</html>
